@@ -7,6 +7,7 @@ header {
     height: 400px;
     justify-content: space-between;
     gap: 16px;
+    background-color: rgb(54, 28, 28);
 }
 
 header #Logo {
