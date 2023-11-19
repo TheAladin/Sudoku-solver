@@ -31,7 +31,11 @@ const checkSquare = function() {
 }
 
 const clearGrid = function() {
-
+  for(let i = 0;i<9;i++) {
+    for(let j = 0;j<0;j++) {
+      grid[i][j] = null;
+    }
+  }
 }
 
 const insertDigit = function() {
