@@ -2,8 +2,8 @@ const checkRow = function(rowNumber) {
   let checkingArray = [];
   for(let i = 0;i<9;i++) {
     checkingArray.push(grid[rowNumber][i])
-    checkingArray.sort()
   }
+  checkingArray.sort()
   for(let i = 0;i<9;i++) {
     if (i != checkingArray[i]) {
       return false;
