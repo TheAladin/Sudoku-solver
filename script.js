@@ -2,8 +2,8 @@ const checkRow = function(rowNumber) {
   let checkingArray = [];
   for(let i = 0;i<9;i++) {
     checkingArray.push(grid[rowNumber][i])
-    checkingArray.sort()
   }
+  checkingArray.sort()
   for(let i = 0;i<9;i++) {
     if (i != checkingArray[i]) {
       return false;
@@ -16,8 +16,8 @@ const checkColumn = function(columnNumber) {
   let checkingArray = [];
   for(let i = 0;i<9;i++) {
     checkingArray.push(grid[i][columnNumber])
-    checkingArray.sort()
   }
+  checkingArray.sort()
   for(let i = 0;i<9;i++) {
     if (i != checkingArray[i]) {
       return false;
@@ -26,8 +26,20 @@ const checkColumn = function(columnNumber) {
   return true;
 }
 
-const checkSquare = function() {
-
+const checkSquare = function(firstElementLine, firstElementColumn) {
+  let checkingArray = [];
+  for(let i = firstElementLine;i<firstElementLine+3;i++) {
+    for(let j = firstElementColumn;j<firstElementColumn+3;j++) {
+      checkingArray.push(grid[i][j]);
+    }
+  }
+  checkingArray.sort()
+  for(let i = 0;i<9;i++) {
+    if (i != checkingArray[i]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 const clearGrid = function() {
