@@ -15,3 +15,11 @@ header #Logo {
     color: rgb(170, 150, 150);
     justify-self: flex-start;
 }
+
+#grid {
+    display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 2px; 
+  border: 2px solid #000; 
+}
